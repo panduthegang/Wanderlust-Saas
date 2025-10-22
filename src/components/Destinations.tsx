@@ -15,7 +15,7 @@ const destinations: Destination[] = [
   {
     name: 'Maldives',
     location: 'Indian Ocean',
-    image: 'https://images.unsplash.com/photo-1531386450450-969f935bd522?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMG9jZWFufGVufDB8fHx0ZWFsfDE3NjEwNDI0MDB8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     rating: 4.9,
     price: 'From ₹2,07,400',
     description: 'Crystal-clear turquoise waters and pristine white sand beaches'
@@ -23,7 +23,7 @@ const destinations: Destination[] = [
   {
     name: 'Bahamas',
     location: 'Caribbean Sea',
-    image: 'https://images.unsplash.com/photo-1662460873952-78a8211ccecc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1264',
     rating: 4.8,
     price: 'From ₹1,57,600',
     description: 'Paradise hammocks between swaying palms with azure ocean views'
@@ -31,7 +31,7 @@ const destinations: Destination[] = [
   {
     name: 'Emerald Shores',
     location: 'Destin, Florida',
-    image: 'https://images.unsplash.com/photo-1647797013933-c53ac86cb997?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1626448957413-ff3da1ee8eb8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     rating: 4.7,
     price: 'From ₹1,07,800',
     description: 'Luxury beachfront resort with emerald-green waters'
@@ -39,7 +39,7 @@ const destinations: Destination[] = [
   {
     name: 'Raja Ampat',
     location: 'Indonesia',
-    image: 'https://images.unsplash.com/photo-1650509010045-70888b02ffa8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMG9jZWFufGVufDB8fHx0ZWFsfDE3NjEwNDI0MDB8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1650445332429-75ceee3f3226?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
     rating: 5.0,
     price: 'From ₹2,32,300',
     description: 'Untouched tropical islands with vibrant marine life'
@@ -47,7 +47,7 @@ const destinations: Destination[] = [
   {
     name: 'Tropical Paradise',
     location: 'Caribbean Islands',
-    image: 'https://images.unsplash.com/photo-1579034888257-3ed9df835cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1493558103817-58b2924bce98?w=1200&q=80&auto=format&fit=crop',
     rating: 4.9,
     price: 'From ₹1,41,000',
     description: 'Palm-lined beaches perfect for relaxation and adventure'
@@ -55,7 +55,7 @@ const destinations: Destination[] = [
   {
     name: 'Sandy Shores',
     location: 'Pacific Coast',
-    image: 'https://images.unsplash.com/photo-1604348557271-2185f9825a00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
+    image: 'https://images.unsplash.com/photo-1470214203634-e436a8848e23?w=1200&q=80&auto=format&fit=crop',
     rating: 4.6,
     price: 'From ₹82,900',
     description: 'Serene coastal escape with golden sands and gentle waves'

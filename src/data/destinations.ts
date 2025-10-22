@@ -13,7 +13,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Maldives',
     location: 'Indian Ocean',
-    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1200&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     rating: 4.9,
     price: 'From ₹2,07,400',
     priceValue: 207400,
@@ -23,7 +23,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Bahamas',
     location: 'Caribbean Sea',
-    image: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1200&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1264',
     rating: 4.8,
     price: 'From ₹1,57,600',
     priceValue: 157600,
@@ -33,7 +33,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Emerald Shores',
     location: 'Destin, Florida',
-    image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1626448957413-ff3da1ee8eb8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     rating: 4.7,
     price: 'From ₹1,07,800',
     priceValue: 107800,
@@ -43,7 +43,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Raja Ampat',
     location: 'Indonesia',
-    image: 'https://images.unsplash.com/photo-1503264116251-35a269479413?w=1200&q=80&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1650445332429-75ceee3f3226?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
     rating: 5.0,
     price: 'From ₹2,32,300',
     priceValue: 232300,
@@ -103,7 +103,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Seychelles',
     location: 'East Africa',
-    image: 'https://images.unsplash.com/photo-1583479399927-1f9df5e04e5a?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1636065441314-619af7a2dd8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
     rating: 5.0,
     price: 'From ₹1,99,200',
     priceValue: 199200,
@@ -133,7 +133,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Bora Bora',
     location: 'French Polynesia',
-    image: 'https://images.unsplash.com/photo-1589279003619-f37a2a553bfa?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1738762932370-468a90e0ff68?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     rating: 5.0,
     price: 'From ₹2,49,000',
     priceValue: 249000,
@@ -143,7 +143,7 @@ export const allDestinations: Destination[] = [
   {
     name: 'Amalfi Coast',
     location: 'Italy',
-    image: 'https://images.unsplash.com/photo-1533651101600-b1a5499cd1e7?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1612698093158-e07ac200d44e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
     rating: 4.8,
     price: 'From ₹1,32,800',
     priceValue: 132800,
