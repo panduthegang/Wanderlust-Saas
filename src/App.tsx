@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import Destinations from './components/Destinations';
 import Services from './components/Services';
 import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
       <Destinations />
       <Services />
       <Testimonials />
-      <Contact />
       <Footer />
     </div>
   );

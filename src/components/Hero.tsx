@@ -1,88 +1,87 @@
-import { Warp } from "@paper-design/shaders-react";
-import { Plane, MapPin, Calendar } from 'lucide-react';
+import WarpShaderHero from './ui/warp-shader';
+import { ArrowRight, MapPin } from 'lucide-react';
 
-export default function Hero() {
+const Hero: React.FC = () => {
   return (
     <section id="home" className="relative min-h-screen overflow-hidden">
-      <div className="absolute inset-0">
-        <Warp
-          style={{ height: "100%", width: "100%" }}
-          proportion={0.45}
-          softness={1}
-          distortion={0.25}
-          swirl={0.8}
-          swirlIterations={10}
-          shape="checks"
-          shapeScale={0.1}
-          scale={1}
-          rotation={0}
-          speed={0.6}
-          colors={["hsl(195, 85%, 25%)", "hsl(180, 75%, 45%)", "hsl(170, 80%, 60%)", "hsl(190, 70%, 70%)"]}
-        />
-      </div>
+      <WarpShaderHero />
 
-      <div className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-12 pt-28 pb-16">
-        <div className="max-w-6xl w-full text-center space-y-12">
-          <div className="space-y-6 animate-fade-in">
-            <h1 className="text-white text-6xl md:text-8xl lg:text-9xl font-serif italic font-light text-balance leading-tight tracking-tight">
-              Discover Your
-              <br />
-              <span className="bg-gradient-to-r from-amber-200 via-yellow-100 to-amber-200 bg-clip-text text-transparent">
-                Next Adventure
-              </span>
-            </h1>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30"></div>
 
-            <p className="text-white/90 text-xl md:text-2xl lg:text-3xl font-sans font-light leading-relaxed max-w-3xl mx-auto">
-              Explore breathtaking destinations and create unforgettable memories with our curated travel experiences
-            </p>
+      <div className="relative z-10 min-h-screen flex items-center justify-center px-6 py-32">
+        <div className="max-w-6xl w-full text-center space-y-10">
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-6 py-2 rounded-full text-white/90 text-sm font-medium animate-fade-in">
+            <MapPin className="w-4 h-4" />
+            <span>Discover Paradise Worldwide</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-8">
+          <h1 className="text-white text-6xl md:text-8xl lg:text-9xl font-serif font-light tracking-tight leading-none animate-slide-up" style={{ fontFamily: "'Instrument Serif', serif" }}>
+            La Dolce Vita
+          </h1>
+
+          <h2 className="text-white text-3xl md:text-5xl font-light leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: "'Manrope', sans-serif" }}>
+            Experience the <span className="italic">sweet life</span> of endless ocean horizons
+          </h2>
+
+          <p className="text-white/90 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: "'Manrope', sans-serif" }}>
+            Embark on unforgettable journeys to the world's most breathtaking coastal destinations.
+            Where azure waters meet golden sands, your dream vacation awaits.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center pt-6">
             <a
               href="#destinations"
-              className="group px-10 py-5 bg-white/95 backdrop-blur-sm rounded-full text-cyan-700 font-bold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl flex items-center gap-3"
+              className="group px-10 py-5 bg-white rounded-full text-slate-800 font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center gap-3"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              <Plane className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               Explore Destinations
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#contact"
-              className="px-10 py-5 bg-gradient-to-r from-amber-400 to-orange-500 text-white rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 hover:shadow-2xl flex items-center gap-3"
+              href="#services"
+              className="px-10 py-5 bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-full text-white font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              style={{ fontFamily: "'Manrope', sans-serif" }}
             >
-              <Calendar className="w-5 h-5" />
-              Plan Your Trip
+              View Services
             </a>
           </div>
 
-          <div className="pt-16 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-16">
+            <div className="text-center space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Instrument Serif', serif" }}>
+                150+
               </div>
-              <h3 className="text-white font-serif italic text-2xl mb-3">200+ Destinations</h3>
-              <p className="text-white/80 font-sans">Handpicked locations across the globe</p>
+              <div className="text-white/80 text-sm md:text-base" style={{ fontFamily: "'Manrope', sans-serif" }}>
+                Destinations
+              </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-teal-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Plane className="w-8 h-8 text-white" />
+            <div className="text-center space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Instrument Serif', serif" }}>
+                50K+
               </div>
-              <h3 className="text-white font-serif italic text-2xl mb-3">10,000+ Travelers</h3>
-              <p className="text-white/80 font-sans">Happy adventurers worldwide</p>
+              <div className="text-white/80 text-sm md:text-base" style={{ fontFamily: "'Manrope', sans-serif" }}>
+                Happy Travelers
+              </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-white" />
+            <div className="text-center space-y-2">
+              <div className="text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Instrument Serif', serif" }}>
+                25
               </div>
-              <h3 className="text-white font-serif italic text-2xl mb-3">24/7 Support</h3>
-              <p className="text-white/80 font-sans">Always here for your journey</p>
+              <div className="text-white/80 text-sm md:text-base" style={{ fontFamily: "'Manrope', sans-serif" }}>
+                Years Experience
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 to-transparent"></div>
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-3 bg-white/70 rounded-full"></div>
+        </div>
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;
