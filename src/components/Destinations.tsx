@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom';
 import { MapPin, Star, ArrowRight } from 'lucide-react';
+import { slugify } from '../lib/utils';
 
 interface Destination {
   name: string;
@@ -15,7 +17,7 @@ const destinations: Destination[] = [
     location: 'Indian Ocean',
     image: 'https://images.unsplash.com/photo-1531386450450-969f935bd522?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHwxfHx0cm9waWNhbCUyMG9jZWFufGVufDB8fHx0ZWFsfDE3NjEwNDI0MDB8MA&ixlib=rb-4.1.0&q=85',
     rating: 4.9,
-    price: 'From $2,499',
+    price: 'From ₹2,07,400',
     description: 'Crystal-clear turquoise waters and pristine white sand beaches'
   },
   {
@@ -23,7 +25,7 @@ const destinations: Destination[] = [
     location: 'Caribbean Sea',
     image: 'https://images.unsplash.com/photo-1662460873952-78a8211ccecc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHw0fHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
     rating: 4.8,
-    price: 'From $1,899',
+    price: 'From ₹1,57,600',
     description: 'Paradise hammocks between swaying palms with azure ocean views'
   },
   {
@@ -31,7 +33,7 @@ const destinations: Destination[] = [
     location: 'Destin, Florida',
     image: 'https://images.unsplash.com/photo-1647797013933-c53ac86cb997?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwzfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
     rating: 4.7,
-    price: 'From $1,299',
+    price: 'From ₹1,07,800',
     description: 'Luxury beachfront resort with emerald-green waters'
   },
   {
@@ -39,7 +41,7 @@ const destinations: Destination[] = [
     location: 'Indonesia',
     image: 'https://images.unsplash.com/photo-1650509010045-70888b02ffa8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njl8MHwxfHNlYXJjaHw0fHx0cm9waWNhbCUyMG9jZWFufGVufDB8fHx0ZWFsfDE3NjEwNDI0MDB8MA&ixlib=rb-4.1.0&q=85',
     rating: 5.0,
-    price: 'From $2,799',
+    price: 'From ₹2,32,300',
     description: 'Untouched tropical islands with vibrant marine life'
   },
   {
@@ -47,7 +49,7 @@ const destinations: Destination[] = [
     location: 'Caribbean Islands',
     image: 'https://images.unsplash.com/photo-1579034888257-3ed9df835cf4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
     rating: 4.9,
-    price: 'From $1,699',
+    price: 'From ₹1,41,000',
     description: 'Palm-lined beaches perfect for relaxation and adventure'
   },
   {
@@ -55,12 +57,14 @@ const destinations: Destination[] = [
     location: 'Pacific Coast',
     image: 'https://images.unsplash.com/photo-1604348557271-2185f9825a00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwyfHxiZWFjaCUyMGRlc3RpbmF0aW9ufGVufDB8fHxibHVlfDE3NjEwNDIzOTV8MA&ixlib=rb-4.1.0&q=85',
     rating: 4.6,
-    price: 'From $999',
+    price: 'From ₹82,900',
     description: 'Serene coastal escape with golden sands and gentle waves'
   }
 ];
 
 const Destinations: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="destinations" className="py-32 px-6 bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50">
       <div className="max-w-7xl mx-auto">
@@ -113,7 +117,11 @@ const Destinations: React.FC = () => {
                   <span className="text-xl font-bold text-teal-600" style={{ fontFamily: "'Manrope', sans-serif" }}>
                     {destination.price}
                   </span>
-                  <button className="flex items-center gap-2 text-teal-600 font-semibold hover:gap-3 transition-all" style={{ fontFamily: "'Manrope', sans-serif" }}>
+                  <button
+                    onClick={() => navigate(`/destinations/${slugify(destination.name)}`)}
+                    className="flex items-center gap-2 text-teal-600 font-semibold hover:gap-3 transition-all"
+                    style={{ fontFamily: "'Manrope', sans-serif" }}
+                  >
                     View Details
                     <ArrowRight className="w-4 h-4" />
                   </button>
@@ -124,7 +132,11 @@ const Destinations: React.FC = () => {
         </div>
 
         <div className="text-center mt-12">
-          <button className="px-10 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold text-lg transition-all hover:scale-105 shadow-lg" style={{ fontFamily: "'Manrope', sans-serif" }}>
+          <button
+            onClick={() => navigate('/destinations')}
+            className="px-10 py-4 bg-teal-600 hover:bg-teal-700 text-white rounded-full font-semibold text-lg transition-all hover:scale-105 shadow-lg"
+            style={{ fontFamily: "'Manrope', sans-serif" }}
+          >
             View All Destinations
           </button>
         </div>

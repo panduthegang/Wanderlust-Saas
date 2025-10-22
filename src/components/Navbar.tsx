@@ -1,9 +1,13 @@
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Compass, Menu, X } from 'lucide-react';
 
 export default function Navbar() {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,12 +29,22 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Destinations', href: '#destinations' },
-    { name: 'Services', href: '#services' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/', isRoute: true },
+    { name: 'Destinations', href: isHomePage ? '#destinations' : '/destinations', isRoute: !isHomePage },
+    { name: 'Services', href: '/#services', isRoute: false },
+    { name: 'Testimonials', href: '/#testimonials', isRoute: false },
+    { name: 'Contact', href: '/#contact', isRoute: false },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, link: typeof navLinks[0]) => {
+    if (link.isRoute) {
+      e.preventDefault();
+      navigate(link.href);
+      setMobileMenuOpen(false);
+    } else {
+      setMobileMenuOpen(false);
+    }
+  };
 
   return (
     <>
@@ -42,7 +56,7 @@ export default function Navbar() {
         } rounded-full px-3 sm:px-4 md:px-6 lg:px-8 py-2 sm:py-3 md:py-4 lg:py-5`}
       >
         <div className="flex items-center justify-between gap-2">
-          <a href="#home" className="flex items-center gap-1.5 sm:gap-2 md:gap-3 group flex-shrink-0">
+          <button onClick={() => navigate('/')} className="flex items-center gap-1.5 sm:gap-2 md:gap-3 group flex-shrink-0">
             <div className="relative">
               <Compass className={`transition-all duration-300 ${scrolled ? 'w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7' : 'w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8'} text-cyan-600 group-hover:rotate-180`} />
               <div className="absolute inset-0 bg-cyan-400/20 rounded-full blur-xl group-hover:bg-cyan-400/40 transition-all"></div>
@@ -50,13 +64,14 @@ export default function Navbar() {
             <span className={`font-serif italic font-semibold transition-all duration-300 whitespace-nowrap ${scrolled ? 'text-base sm:text-lg md:text-xl lg:text-2xl' : 'text-lg sm:text-xl md:text-2xl lg:text-3xl'} text-slate-800`}>
               Wanderlust
             </span>
-          </a>
+          </button>
 
           <div className="hidden lg:flex items-center gap-1 flex-1 justify-center">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link)}
                 className="px-4 xl:px-6 py-2.5 text-slate-700 hover:text-cyan-600 font-medium transition-all duration-300 hover:scale-105 relative group whitespace-nowrap"
               >
                 {link.name}
@@ -126,7 +141,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, link)}
                 className="group relative block px-8 py-5 text-white font-semibold text-xl rounded-[2rem] overflow-hidden transition-all duration-500 transform hover:scale-105"
                 style={{
                   animationDelay: `${index * 80}ms`,
