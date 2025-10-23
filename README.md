@@ -1,7 +1,7 @@
 # 🌍 Wanderlust - Premium Travel Booking Platform
 
 <div align="center">
-  <img src="public/Thumbnail.JPG" alt="Wanderlust Logo" >
+  <img src="public/Thumbnail.jpg" alt="Wanderlust Logo" >
 
   [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge)](https://wanderlust-by-harsh.vercel.app)
   [![GitHub](https://img.shields.io/badge/GitHub-panduthegang-blue?style=for-the-badge&logo=github)](https://github.com/panduthegang/Wanderlust-Saas)
