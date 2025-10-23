@@ -133,60 +133,62 @@ export default function DestinationDetails() {
   return (
     <div className="min-h-screen bg-white">
       <div className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-col sm:flex-row items-start sm:items-center gap-3">
           <button onClick={() => navigate('/destinations')} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 bg-white text-slate-700 hover:bg-slate-50 transition">
             <ArrowLeft className="w-4 h-4" /> Back to Destinations
           </button>
-          <div className="ml-auto flex items-center gap-3 text-slate-600">
+          <div className="sm:ml-auto flex items-center gap-3 text-slate-600 flex-wrap">
             <MapPin className="w-4 h-4 text-teal-600" />
             <span className="text-sm">{destination.location}</span>
-            <span className="inline-flex items-center gap-1 text-sm text-amber-600 ml-4">
+            <span className="inline-flex items-center gap-1 text-sm text-amber-600 sm:ml-4">
               <Star className="w-4 h-4 fill-amber-400 text-amber-400" /> {destination.rating}
             </span>
           </div>
         </div>
       </div>
 
-      <section className="px-6 pt-10">
+      <section className="px-4 sm:px-6 pt-10">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <Carousel setApi={setEmbla} opts={{ align: 'start', loop: true }} className="relative">
                 <CarouselContent>
                   {gallery.map((src, idx) => (
-                    <CarouselItem key={idx} className="md:basis-3/4 lg:basis-full">
+                    <CarouselItem key={idx} className="basis-full">
                       <div className="relative">
-                        <img src={src} alt={`${destination.name} ${idx + 1}`} className="w-full h-[420px] md:h-[520px] object-cover" />
+                        <img src={src} alt={`${destination.name} ${idx + 1}`} className="w-full h-[300px] sm:h-[420px] md:h-[520px] object-cover" />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
               </Carousel>
-              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between pointer-events-none">
-                <h1 className="text-white text-4xl md:text-5xl font-light drop-shadow" style={{ fontFamily: '"Instrument Serif", serif' }}>{destination.name}</h1>
-                <span className="px-3 py-1.5 rounded-full bg-white/90 text-slate-800 text-sm font-semibold border border-white">{destination.category}</span>
+              <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 pointer-events-none">
+                <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-light drop-shadow" style={{ fontFamily: '"Instrument Serif", serif' }}>{destination.name}</h1>
+                <span className="px-3 py-1.5 rounded-full bg-white/90 text-slate-800 text-xs sm:text-sm font-semibold border border-white">{destination.category}</span>
               </div>
             </div>
-            <div className="mt-4 overflow-x-auto pb-2">
-              <div className="flex items-center gap-3 min-w-max">
+            <div className="mt-4 overflow-x-auto pb-2 -mx-4 sm:mx-0 px-4 sm:px-0">
+              <div className="flex items-center gap-2 sm:gap-3 min-w-max">
                 {gallery.map((src, i) => (
                   <button
                     key={i}
                     onClick={() => embla?.scrollTo(i)}
                     className={cn(
-                      'relative rounded-xl overflow-hidden transition-all flex-shrink-0 aspect-[4/3]',
+                      'relative rounded-lg sm:rounded-xl transition-all flex-shrink-0 aspect-[4/3] p-0.5',
                       selectedIndex === i
-                        ? 'ring-4 ring-teal-500 ring-offset-2'
-                        : 'ring-2 ring-slate-200 hover:ring-teal-300'
+                        ? 'bg-gradient-to-br from-teal-400 to-teal-600'
+                        : 'bg-slate-200 hover:bg-teal-200'
                     )}
                     aria-label={`View image ${i + 1}`}
                   >
-                    <img
-                      src={src}
-                      alt={`${destination.name} thumbnail ${i + 1}`}
-                      className="w-24 h-20 sm:w-28 sm:h-[84px] md:w-32 md:h-24 object-cover"
-                    />
+                    <div className="relative rounded-md sm:rounded-lg overflow-hidden h-full">
+                      <img
+                        src={src}
+                        alt={`${destination.name} thumbnail ${i + 1}`}
+                        className="w-20 h-16 sm:w-28 sm:h-[84px] md:w-32 md:h-24 object-cover"
+                      />
+                    </div>
                   </button>
                 ))}
               </div>
@@ -194,13 +196,13 @@ export default function DestinationDetails() {
           </div>
 
           <aside className="lg:h-full">
-            <div className="sticky top-24 rounded-3xl border border-slate-200 shadow-xl p-6 bg-white">
+            <div className="sticky top-24 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl p-4 sm:p-6 bg-white">
               <div className="space-y-3">
                 <div className="text-slate-500 text-sm">Starting from</div>
-                <div className="text-3xl font-bold text-teal-700" style={{ fontFamily: 'Manrope, sans-serif' }}>{priceFormatted}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Manrope, sans-serif' }}>{priceFormatted}</div>
                 <div className="text-sm text-slate-500">per person, inclusive of taxes</div>
               </div>
-              <button className="mt-6 w-full px-6 py-4 rounded-full bg-teal-600 hover:bg-teal-700 text-white font-semibold transition">Reserve Your Journey</button>
+              <button className="mt-6 w-full px-6 py-3 sm:py-4 rounded-full bg-teal-600 hover:bg-teal-700 text-white font-semibold transition">Reserve Your Journey</button>
               <ul className="mt-6 space-y-2 text-sm text-slate-600">
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> Flexible rescheduling</li>
                 <li className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> 24/7 concierge support</li>
@@ -281,15 +283,15 @@ export default function DestinationDetails() {
         </div>
       </section>
 
-      <section className="px-6 py-16">
+      <section className="px-4 sm:px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light text-slate-800 mb-10" style={{ fontFamily: '"Instrument Serif", serif' }}>Tailored Packages</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-slate-800 mb-10" style={{ fontFamily: '"Instrument Serif", serif' }}>Tailored Packages</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {packages.map((p, idx) => (
-              <div key={idx} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xl hover:shadow-2xl transition">
+              <div key={idx} className="rounded-2xl sm:rounded-3xl border border-slate-200 bg-white p-5 sm:p-6 shadow-xl hover:shadow-2xl transition">
                 <div className="text-sm text-slate-500">For up to {p.people} {p.people === 1 ? 'guest' : 'guests'}</div>
-                <div className="text-xl font-semibold text-slate-800 mt-2">{p.name}</div>
-                <div className="text-teal-700 text-2xl font-bold mt-4">{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(p.price)}</div>
+                <div className="text-lg sm:text-xl font-semibold text-slate-800 mt-2">{p.name}</div>
+                <div className="text-teal-700 text-xl sm:text-2xl font-bold mt-4">{new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', maximumFractionDigits: 0 }).format(p.price)}</div>
                 <ul className="mt-4 space-y-2 text-sm text-slate-600">
                   {p.perks.map((perk, i) => (
                     <li key={i} className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> {perk}</li>
@@ -302,10 +304,10 @@ export default function DestinationDetails() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 bg-gradient-to-br from-teal-50 via-blue-50 to-slate-50">
+      <section className="px-4 sm:px-6 pb-20 bg-gradient-to-br from-teal-50 via-blue-50 to-slate-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-light text-slate-800 mb-10" style={{ fontFamily: '"Instrument Serif", serif' }}>Guest Stories</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-slate-800 mb-10" style={{ fontFamily: '"Instrument Serif", serif' }}>Guest Stories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {(details?.reviews || [
               {
                 name: 'Aarav Mehta',
@@ -326,9 +328,9 @@ export default function DestinationDetails() {
                 rating: 5,
               },
             ]).map((t, idx) => (
-              <div key={idx} className="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all">
-                <div className="absolute -top-4 -right-4 w-10 h-10 bg-gradient-to-br from-teal-400 to-blue-400 rounded-2xl flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform">
-                  <Quote className="w-5 h-5 text-white" />
+              <div key={idx} className="group relative bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all">
+                <div className="absolute -top-3 -right-3 sm:-top-4 sm:-right-4 w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-teal-400 to-blue-400 rounded-2xl flex items-center justify-center rotate-12 group-hover:rotate-0 transition-transform">
+                  <Quote className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </div>
                 <div className="flex gap-1 mb-3">
                   {Array.from({ length: t.rating }).map((_, i) => (

@@ -62,12 +62,17 @@ const DestinationsCatalogue = () => {
 
       <section className="relative z-20 pt-32 pb-24 px-6 overflow-visible">
         <div className="absolute inset-0 -z-10">
-          <img
-            src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80&auto=format&fit=crop"
-            alt="Ocean waves on a sunny beach"
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/50" />
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60" />
+          <div className="absolute inset-0 bg-teal-900/10" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -105,20 +110,20 @@ const DestinationsCatalogue = () => {
                     <span className="font-semibold" style={{ fontFamily: "'Manrope', sans-serif" }}>Filter & Sort</span>
                   </div>
 
-                  <div className="relative">
+                  <div className="relative flex-1 lg:flex-initial">
                     <button
                       onClick={() => {
                         setShowCategoryMenu(!showCategoryMenu);
                         setShowSortMenu(false);
                       }}
-                      className="px-5 py-3 bg-white/95 backdrop-blur-md rounded-xl border border-white/70 hover:border-white hover:bg-white transition-all flex items-center gap-2 shadow-lg"
+                      className="w-full lg:w-auto px-5 py-3 bg-white/95 backdrop-blur-md rounded-xl border border-white/70 hover:border-white hover:bg-white transition-all flex items-center justify-center gap-2 shadow-lg"
                       style={{ fontFamily: "'Manrope', sans-serif" }}
                     >
-                      <span className="font-semibold text-slate-700">Category: {selectedCategory}</span>
+                      <span className="font-semibold text-slate-700 text-sm sm:text-base">Category: {selectedCategory}</span>
                       <ChevronDown className={`w-4 h-4 text-slate-600 transition-transform ${showCategoryMenu ? 'rotate-180' : ''}`} />
                     </button>
                     {showCategoryMenu && (
-                      <div className="absolute top-full mt-2 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 min-w-[200px] z-20">
+                      <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 min-w-[200px] max-w-[90vw] z-20">
                         {categories.map((category) => (
                           <button
                             key={category}
@@ -138,22 +143,22 @@ const DestinationsCatalogue = () => {
                     )}
                   </div>
 
-                  <div className="relative">
+                  <div className="relative flex-1 lg:flex-initial">
                     <button
                       onClick={() => {
                         setShowSortMenu(!showSortMenu);
                         setShowCategoryMenu(false);
                       }}
-                      className="px-5 py-3 bg-white/95 backdrop-blur-md rounded-xl border border-white/70 hover:border-white hover:bg-white transition-all flex items-center gap-2 shadow-lg"
+                      className="w-full lg:w-auto px-5 py-3 bg-white/95 backdrop-blur-md rounded-xl border border-white/70 hover:border-white hover:bg-white transition-all flex items-center justify-center gap-2 shadow-lg"
                       style={{ fontFamily: "'Manrope', sans-serif" }}
                     >
-                      <span className="font-semibold text-slate-700">
+                      <span className="font-semibold text-slate-700 text-sm sm:text-base">
                         {sortOptions.find(opt => opt.value === sortBy)?.label}
                       </span>
                       <ChevronDown className={`w-4 h-4 text-slate-600 transition-transform ${showSortMenu ? 'rotate-180' : ''}`} />
                     </button>
                     {showSortMenu && (
-                      <div className="absolute top-full mt-2 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 min-w-[220px] z-20">
+                      <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 min-w-[220px] max-w-[90vw] z-20">
                         {sortOptions.map((option) => (
                           <button
                             key={option.value}
