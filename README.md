@@ -89,11 +89,6 @@ Experience the platform in action! Browse destinations, explore detailed itinera
 - **🎭 Shadcn/ui** - Beautiful component library
 - **🎪 Radix UI** - Unstyled, accessible components
 
-### Backend & Database
-- **🔥 Supabase** - Backend-as-a-Service
-- **🗄️ PostgreSQL** - Relational database
-- **🔐 Row Level Security** - Built-in auth and security
-
 ### Routing & Navigation
 - **🛣️ React Router v7** - Client-side routing
 - **📍 Dynamic Routes** - SEO-friendly URLs with slugs
