@@ -29,15 +29,15 @@ export const destinationDetails: Record<string, DestinationDetail> = {
   maldives: {
     name: 'Maldives',
     gallery: {
-      main: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80&auto=format&fit=crop',
+      main: 'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
       gallery: [
         'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1545207443-c8a6afd5ec45?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1503125210483-8b1d12bccdbe?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1576158831003-d41033ec31fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
       ],
     },
     reviews: [
@@ -254,15 +254,15 @@ export const destinationDetails: Record<string, DestinationDetail> = {
   seychelles: {
     name: 'Seychelles',
     gallery: {
-      main: 'https://images.unsplash.com/photo-1583479399927-1f9df5e04e5a?w=1400&q=80&auto=format&fit=crop',
+      main: 'https://images.unsplash.com/photo-1636065441314-619af7a2dd8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
       gallery: [
-        'https://images.unsplash.com/photo-1583479399927-1f9df5e04e5a?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1623740861303-50808ce358f2?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1590523741823-ab7e8b8f9c7f?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1551244072-5d12893278ab?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1612528443702-f6741f70a049?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1587993598423-0c4f0c935ef9?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1552055568-3592c71b5bfb?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1636065441314-619af7a2dd8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+        'https://images.unsplash.com/photo-1670577528957-9114b37c8080?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
+        'https://images.unsplash.com/photo-1617362985992-d0b6814cacef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1284',
+        'https://images.unsplash.com/photo-1670577528957-9114b37c8080?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171',
+        'https://images.unsplash.com/photo-1577353716826-9151912dcdd1?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
+        'https://images.unsplash.com/photo-1668800477268-021d1ed8564e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171p',
+        'https://images.unsplash.com/photo-1623857587031-f79f53808d7a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
       ],
     },
     reviews: [
@@ -299,15 +299,15 @@ export const destinationDetails: Record<string, DestinationDetail> = {
   'bora-bora': {
     name: 'Bora Bora',
     gallery: {
-      main: 'https://images.unsplash.com/photo-1589279003619-f37a2a553bfa?w=1400&q=80&auto=format&fit=crop',
+      main: 'https://images.unsplash.com/photo-1738762932370-468a90e0ff68?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
       gallery: [
-        'https://images.unsplash.com/photo-1589279003619-f37a2a553bfa?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1580837119756-563d608dd119?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1597933534696-e1f6c5e0f71f?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1738762932370-468a90e0ff68?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1532408840957-031d8034aeef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
+        'https://images.unsplash.com/photo-1532408840957-031d8034aeef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
+        'https://images.unsplash.com/photo-1500930287596-c1ecaa373bb2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1597254512641-c0141c25f32c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074',
+        'https://images.unsplash.com/photo-1518232197542-9325c59ecac9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1706461168423-d1a591eb4936?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1309',
       ],
     },
     reviews: [
