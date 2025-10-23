@@ -147,8 +147,8 @@ export default function DestinationDetails() {
         </div>
       </div>
 
-      <section className="px-4 sm:px-6 pt-10">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-6">
+      <section className="px-4 sm:px-6 pt-8 sm:pt-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-6 lg:gap-6">
           <div className="lg:col-span-2">
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl" onMouseEnter={() => setIsHovering(true)} onMouseLeave={() => setIsHovering(false)}>
               <Carousel setApi={setEmbla} opts={{ align: 'start', loop: true }} className="relative">
@@ -163,19 +163,19 @@ export default function DestinationDetails() {
                   ))}
                 </CarouselContent>
               </Carousel>
-              <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 pointer-events-none">
-                <h1 className="text-white text-2xl sm:text-4xl md:text-5xl font-light drop-shadow" style={{ fontFamily: '"Instrument Serif", serif' }}>{destination.name}</h1>
-                <span className="px-3 py-1.5 rounded-full bg-white/90 text-slate-800 text-xs sm:text-sm font-semibold border border-white">{destination.category}</span>
+              <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-2 sm:gap-3 pointer-events-none">
+                <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-light drop-shadow" style={{ fontFamily: '"Instrument Serif", serif' }}>{destination.name}</h1>
+                <span className="px-3 py-1.5 rounded-full bg-white/90 text-slate-800 text-xs sm:text-sm font-semibold border border-white whitespace-nowrap">{destination.category}</span>
               </div>
             </div>
             <div className="mt-4 overflow-x-auto pb-2 -mx-4 sm:mx-0 px-4 sm:px-0">
-              <div className="flex items-center gap-2 sm:gap-3 min-w-max">
+              <div className="flex items-center gap-2 sm:gap-3">
                 {gallery.map((src, i) => (
                   <button
                     key={i}
                     onClick={() => embla?.scrollTo(i)}
                     className={cn(
-                      'relative rounded-lg sm:rounded-xl transition-all flex-shrink-0 aspect-[4/3] p-0.5',
+                      'relative rounded-lg sm:rounded-xl transition-all flex-shrink-0 p-0.5',
                       selectedIndex === i
                         ? 'bg-gradient-to-br from-teal-400 to-teal-600'
                         : 'bg-slate-200 hover:bg-teal-200'
@@ -186,7 +186,7 @@ export default function DestinationDetails() {
                       <img
                         src={src}
                         alt={`${destination.name} thumbnail ${i + 1}`}
-                        className="w-20 h-16 sm:w-28 sm:h-[84px] md:w-32 md:h-24 object-cover"
+                        className="w-24 h-20 sm:w-28 sm:h-[84px] md:w-32 md:h-24 object-cover"
                       />
                     </div>
                   </button>
@@ -196,17 +196,17 @@ export default function DestinationDetails() {
           </div>
 
           <aside className="lg:h-full">
-            <div className="sticky top-24 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl p-4 sm:p-6 bg-white">
-              <div className="space-y-3">
-                <div className="text-slate-500 text-sm">Starting from</div>
-                <div className="text-2xl sm:text-3xl font-bold text-teal-700" style={{ fontFamily: 'Manrope, sans-serif' }}>{priceFormatted}</div>
-                <div className="text-sm text-slate-500">per person, inclusive of taxes</div>
+            <div className="sticky top-24 rounded-2xl sm:rounded-3xl border border-slate-200 shadow-xl p-5 sm:p-6 bg-white">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="text-slate-500 text-sm sm:text-base">Starting from</div>
+                <div className="text-3xl sm:text-3xl md:text-4xl font-bold text-teal-700" style={{ fontFamily: 'Manrope, sans-serif' }}>{priceFormatted}</div>
+                <div className="text-xs sm:text-sm text-slate-500">per person, inclusive of taxes</div>
               </div>
-              <button className="mt-6 w-full px-6 py-3 sm:py-4 rounded-full bg-teal-600 hover:bg-teal-700 text-white font-semibold transition">Reserve Your Journey</button>
-              <ul className="mt-6 space-y-2 text-sm text-slate-600">
-                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> Flexible rescheduling</li>
-                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> 24/7 concierge support</li>
-                <li className="flex items-center gap-2"><Check className="w-4 h-4 text-teal-600" /> Best price guarantee</li>
+              <button className="mt-5 sm:mt-6 w-full px-6 py-3.5 sm:py-4 rounded-full bg-teal-600 hover:bg-teal-700 text-white text-sm sm:text-base font-semibold transition">Reserve Your Journey</button>
+              <ul className="mt-5 sm:mt-6 space-y-2.5 sm:space-y-2 text-sm sm:text-sm text-slate-600">
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 flex-shrink-0 text-teal-600" /> Flexible rescheduling</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 flex-shrink-0 text-teal-600" /> 24/7 concierge support</li>
+                <li className="flex items-center gap-2"><Check className="w-4 h-4 flex-shrink-0 text-teal-600" /> Best price guarantee</li>
               </ul>
             </div>
           </aside>
