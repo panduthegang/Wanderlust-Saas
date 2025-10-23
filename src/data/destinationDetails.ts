@@ -571,7 +571,7 @@ export const destinationDetails: Record<string, DestinationDetail> = {
     gallery: {
       main: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80&auto=format&fit=crop',
       gallery: [
-        'https://images.unsplash.com/photo-500530855697-b586d89ba3ee?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1400&q=80&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1400&q=80&auto=format&fit=crop',
