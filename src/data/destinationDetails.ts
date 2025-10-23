@@ -524,15 +524,15 @@ export const destinationDetails: Record<string, DestinationDetail> = {
   'raja-ampat': {
     name: 'Raja Ampat',
     gallery: {
-      main: 'https://images.unsplash.com/photo-1503264116251-35a269479413?w=1400&q=80&auto=format&fit=crop',
+      main: 'https://images.unsplash.com/photo-1650445332429-75ceee3f3226?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
       gallery: [
-        'https://images.unsplash.com/photo-1503264116251-35a269479413?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1571501679730-1f93ff5c7a8e?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1650445332429-75ceee3f3226?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
+        'https://images.unsplash.com/photo-1703769605328-01120ea51ee0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1180',
+        'https://images.unsplash.com/photo-1724258194584-a233d8d70846?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1724258317008-7ebabd28648f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+        'https://images.unsplash.com/photo-1653404786584-2166b81a5b3c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332',
         'https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1400&q=80&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1589194312629-903b0f4c2c71?w=1400&q=80&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1703769605297-b77c79f7e2b0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1180',
       ],
     },
     reviews: [
